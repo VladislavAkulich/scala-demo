@@ -1,16 +1,17 @@
 package pages.checkout
 
+import fixtures.User
 import org.openqa.selenium.WebDriver
 import pages.BasePage
 
 class CheckoutStepOnePage(implicit val webDriver: WebDriver) extends BasePage {
   val url = "https://www.saucedemo.com/checkout-step-one.html"
 
-  def fillCustomerInfo(): Unit = {
-    logger.info("Fill customer info")
-    textField("first-name").value = "test user"
-    textField("last-name").value = "test surname"
-    textField("postal-code").value = "220000"
+  def fillCustomerInfo(user: User): Unit = {
+    logger.info(s"Fill customer info for User: ${user}")
+    textField("first-name").value = user.firstName
+    textField("last-name").value = user.lastName
+    textField("postal-code").value = user.zip
   }
 
   def continue(): Unit = {

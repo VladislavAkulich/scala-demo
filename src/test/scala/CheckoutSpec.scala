@@ -22,7 +22,7 @@ class CheckoutSpec extends BaseSpec with Users {
     productsPage.isRemoveBtnExist() should be (true)
     headerElement.openCart()
     cartPage.checkout()
-    checkoutStepOnePage.fillCustomerInfo()
+    checkoutStepOnePage.fillCustomerInfo(StandardUser)
     checkoutStepOnePage.continue()
     checkoutStepTwoPage.finish()
     checkoutCompletePage.getConfirmationMsg() should be ("CHECKOUT: COMPLETE!")
