@@ -16,5 +16,6 @@ libraryDependencies += "org.scalatest" %% "scalatest-flatspec" % "3.2.12" % "tes
 libraryDependencies += "org.scalatest" %% "scalatest-shouldmatchers" % "3.2.12" % "test"
 libraryDependencies += "com.typesafe.scala-logging" %% "scala-logging" % "3.9.4"
 libraryDependencies += "ch.qos.logback" % "logback-classic" % "1.2.11"
+libraryDependencies += "com.typesafe" % "config" % "1.4.2"
 
 logLevel in Scope.Global := util.Level.Info

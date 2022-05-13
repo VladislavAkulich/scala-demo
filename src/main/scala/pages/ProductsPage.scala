@@ -5,7 +5,7 @@ import org.scalatestplus.selenium.*
 
 
 class ProductsPage(implicit val webDriver: WebDriver) extends BasePage {
-  val url = "https://www.saucedemo.com/inventory.html"
+  val url = properties.getProperty("productsUrl")
 
   def getNumberOfItems(): Int = {
     logger.info("Getting number of items on a Product page")
