@@ -8,6 +8,7 @@ class CheckOutCompletePage(implicit val webDriver: WebDriver) extends BasePage {
   val url = "https://www.saucedemo.com/checkout-complete.html"
 
   def getConfirmationMsg(): String = {
+    logger.info("Getting confirmation message for payment")
     find(cssSelector(".title")).get.text
   }
 
